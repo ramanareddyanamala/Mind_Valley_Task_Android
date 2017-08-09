@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_marginTop="50dp"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="reddy.com.ramanareddy.mindvalleyimageloaderexample.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Request"
+        android:background="@color/colorDanger"
+        android:id="@+id/btnCancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="btnCancelRequestClicked"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/frameLayout2">
+
+    </FrameLayout>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_below="@+id/imgView"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="14dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="If image is not loaded by default then click on the load image button. Once image get loaded then please turn off the internet in mobile and click on the delete image button. After clearing the image then click on the load image button. It will display the image from the cache memory."
+        android:id="@+id/textView"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</ScrollView>
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imgView"
+        android:src="@drawable/image"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true" />
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgLoading"
+        android:layout_alignBottom="@+id/imgView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:indeterminate="false" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="Load Image"
+        android:background="@color/colorGreen"
+        android:id="@+id/button"
+
+        android:onClick="btnImageRequestClicked"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp"
+        android:layout_toLeftOf="@+id/imgView"
+        android:layout_toStartOf="@+id/imgView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send a Request to API"
+        android:background="@color/colorPurple"
+        android:id="@+id/button2"
+        android:onClick="btnLoadApiClicked"
+        android:layout_alignParentTop="false"
+        android:layout_toRightOf="@+id/frameLayout2"
+        android:layout_alignBottom="@+id/btnCancel" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="Delte Image"
+        android:background="?attr/colorAccent"
+        android:id="@+id/btnClearImage"
+        android:onClick="btnClearImage"
+        android:layout_above="@+id/imgView"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear cache"
+        android:background="?attr/colorYellow"
+        android:id="@+id/button3"
+        android:onClick="btnClearCache"
+        android:layout_alignTop="@+id/btnClearImage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/imgView"
+        android:layout_toEndOf="@+id/imgView" />
+
+</RelativeLayout>
