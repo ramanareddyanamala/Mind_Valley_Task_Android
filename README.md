@@ -60,6 +60,7 @@ The library can be used as standard android project, which can be imported from 
 * I have created few unit tests of library in MindValleyLibraryTest class
 * I have also generated javadoc, see javadoc folder in root 
 * The coding may have some improvements and missing as this is 2 days work. :) 
+please find the sample Application here http://52.90.89.110:8096/App/.
 
 ### Contact
 Ramana Reddy,
